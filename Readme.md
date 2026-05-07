@@ -300,7 +300,7 @@ churn-detection/
 │   ├── fallback.py              # Rule-based fallback strategy
 │   └── pdf_export.py            # PDF report generation
 ├── figures/                     # Generated evaluation plots
-├── report/                      # LaTeX technical reports
+├── report/                      # LaTeX technical report
 └── tests/
     └── test_rag.py
 ```
