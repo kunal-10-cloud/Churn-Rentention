@@ -83,7 +83,7 @@ st.markdown("""
 
 # ── HEADER ─────────────────────────────────────────────────────────────────────
 st.title("ChurnGuard AI")
-st.caption("Enterprise Customer Retention & Churn Analytics — Milestone 2")
+st.caption("Enterprise Customer Retention & Churn Analytics")
 
 # ── LOAD MODELS ────────────────────────────────────────────────────────────────
 model        = load_model()

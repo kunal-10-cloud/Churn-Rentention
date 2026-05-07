@@ -10,7 +10,7 @@
 \geometry{margin=1in}
 
 \title{\textbf{Customer Churn Prediction \& AI Retention System} \\
-       \large Milestone 1 \& 2 — Full Project Report}
+       \large Technical Report}
 \author{Ananya}
 \date{April 2026}
 
@@ -33,7 +33,7 @@ of retention — making churn prediction a critical business problem.
 
 This project develops a machine-learning system that predicts whether a
 telecom customer is likely to churn using historical customer data, and
-extends the core model with an agentic AI layer (Milestone 2) that generates
+extends the core model with an agentic AI layer that generates
 personalised, actionable retention strategies for individual customers.
 
 % ──────────────────────────────────────────────────────────────────────────────
@@ -178,7 +178,7 @@ Top five churn-driving features:
 % ──────────────────────────────────────────────────────────────────────────────
 \section{System Architecture}
 
-\subsection{Milestone 1 Pipeline}
+\subsection{Predictive ML Pipeline}
 
 \begin{verbatim}
 Customer CSV
@@ -197,7 +197,7 @@ Logistic Regression Model
 Streamlit Web Dashboard
 \end{verbatim}
 
-\subsection{Milestone 2 — Agentic AI Pipeline}
+\subsection{Agentic AI Pipeline}
 
 \begin{verbatim}
 Selected Customer Row
@@ -228,7 +228,7 @@ client. A deterministic rule-based fallback is triggered automatically if
 the LLM is unavailable.
 
 % ──────────────────────────────────────────────────────────────────────────────
-\section{Milestone 2 — AI Retention Advisor}
+\section{AI Retention Advisor}
 
 \subsection{LLM Integration}
 The system uses the \textbf{Groq API} (model: \texttt{llama3-70b-8192}) for
