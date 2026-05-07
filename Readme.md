@@ -379,14 +379,23 @@ included `data/telco.csv` works as a sample) to begin.
 
 1. Push the repository to GitHub.
 2. On https://share.streamlit.io, create a new app pointing at `app.py`.
-3. Open **App settings → Secrets** and add the key in TOML format — do **not**
-   commit a real `secrets.toml`:
+3. Open **Advanced settings** and set **Python version to 3.12**. This is
+   required — the pinned dependencies ship prebuilt wheels for 3.12, whereas
+   newer interpreters (3.13/3.14) force a slow source build that fails on the
+   build host.
+4. In the **Secrets** box add the key in TOML format — do **not** commit a real
+   `secrets.toml`:
 
    ```toml
    GROQ_API_KEY = "gsk_your_real_key_here"
    ```
 
-4. Save. The app reboots and reads the key via `st.secrets`.
+5. Deploy. The app reads the key via `st.secrets`.
+
+**Python version.** Use **Python 3.12**. The scientific stack (`numpy`,
+`pandas`, `pillow`, `torch`, `shap`) is pinned to versions whose prebuilt wheels
+target 3.12; on 3.13/3.14 those wheels do not exist yet and the build compiles
+from source and fails.
 
 **Resource note.** `chromadb`, `sentence-transformers`, and `shap` pull in heavy
 dependencies (including PyTorch) and may approach the memory limits of the free
